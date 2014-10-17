@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>geokeksing</title>
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}" />
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	</head>
+	<body>
+		<div id="header">
+			<h1>geokeksing</h1>
+		</div>
+		<div id="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body
+</html>
