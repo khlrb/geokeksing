@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<b>submit your kekse</b><br/>
+
+<form method="POST" action="/add">
+	<p>a title for your keksversteck</p>
+	<input type="text" name="title"/><br/>
+	<p>who hid the kekse?</p>
+	<input type="text" name="creator"/><br/>
+	<p>description of the versteck</p>
+	<input type="text" name="description"/><br/>
+	<p>latitude</p>
+	<input type="text" name="latitude"/><br/>
+	<p>longitude</p>
+	<input type="text" name="longitude"/><br/>
+	<p><input type="submit" value="submit"/></p>
+</form>
+
+{% endblock %}

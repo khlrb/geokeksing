@@ -12,7 +12,7 @@ geocaching with cookies
 ### preparations
 
 ```
-$ sqlite kekse.db < scheme.sql
+$ sqlite kekse.db < schema.sql
 ```
 
 ### running
