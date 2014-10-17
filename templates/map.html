@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<a href="{{ url_for('add_form') }}">add your Kekse</a><br/>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<div id="map"></div>
+<script>
+	var map = L.map('map').setView([0.0, 0.0], 2);
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: 'Map data &copy; openstreetmap.org', maxZoom: 18}).addTo(map);
+	
+	{% for keks in kekse %}
+		var marker = L.marker([{{ keks.longitude }},  {{ keks.latitude }}]).addTo(map);
+		marker.bindPopup("<b>{{ keks.title }}</b><br/>by <i>{{ keks.creator }}</i><br/>{{ keks.description }}");
+	{% endfor %}
+	
+	marker.openPopup()
+</script>
+
+<h3>list of all kekse</h3>
+
+{% for keks in kekse %}
+	{{ keks }}
+{% endfor %}
+
+{% endblock %}
+
