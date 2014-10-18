@@ -8,7 +8,7 @@
 	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: 'Map data &copy; openstreetmap.org', maxZoom: 18}).addTo(map);
 	
 	{% for keks in kekse %}
-		var marker = L.marker([{{ keks.longitude }},  {{ keks.latitude }}]).addTo(map);
+		var marker = L.marker([{{ keks.latitude }},  {{ keks.longitude }}]).addTo(map);
 		marker.bindPopup("<b>{{ keks.title }}</b><br/>by <i>{{ keks.creator }}</i><br/>{{ keks.description }}");
 	{% endfor %}
 	
