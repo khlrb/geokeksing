@@ -5,5 +5,6 @@ create table kekse (
 	creator text not null,
 	description text not null,
 	latitude text not null,
-	longitude text not null
+	longitude text not null,
+	secret text not null unique
 );	
