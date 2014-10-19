@@ -61,7 +61,9 @@ def add_kekse():
 @app.route('/remove', methods=['POST'])
 def remove_kekse():
 	if request.form['secret']:
-		g.db.execute('update kekse set status = 2 where secret = ?', [request.form['secret']])
+		g.db.execute('update kekse set status = \
+					  (select id from status where title = \'inaktiv\') \
+					  where secret = ?', [request.form['secret']])
 		g.db.commit()
 	return redirect(url_for('show_map'))
 
