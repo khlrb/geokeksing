@@ -1,9 +1,22 @@
 #header {
-	height: 200px;
 	width: 100%;
 }
 
+#header h1 {
+	margin: 0;
+	float: left;
+	font-size: 100%;
+}
+
+#header ul {
+	text-align: right;
+}
+
+#header li {
+	display: inline-block;
+}
+
 #map {
-	height: 500px;
+	height: 600px;
 	width: 100%;
 }

@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
+{% block nav %}
+<ul>
+	<li><a href="{{ url_for('show_map') }}">cancel</a>
+</ul>
+{% endblock %}
 {% block content %}
-<b>remove your own kekse or kese you found</b><br/>
 
 <form method="POST" action="/remove">
 	<p>id of the keksversteck</p>

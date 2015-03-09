@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
+
+{% block nav %}
+<ul>
+	<li><a href="{{ url_for('add_form') }}">add</a></li>
+	<li><a href="{{ url_for('remove_form') }}">remove</a></li>
+</ul>
+{% endblock %}
+
 {% block content %}
-<a href="{{ url_for('add_form') }}">add your Kekse</a>&nbsp;
-<a href="{{ url_for('remove_form') }}">remove Kekse</a><br/>
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 <div id="map"></div>
 <script>
@@ -15,12 +21,6 @@
 	
 	marker.openPopup()
 </script>
-
-<h3>list of all kekse</h3>
-
-{% for keks in kekse %}
-	{{ keks }}
-{% endfor %}
 
 {% endblock %}
 

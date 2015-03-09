@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
+{% block nav %}
+<ul>
+	<li><a href="{{ url_for('show_map') }}">cancel</a></li>
+</ul>
+{% endblock %}
 {% block content %}
-<b>submit your kekse</b><br/>
 
 <form method="POST" action="/add">
 	<p>a title for your keksversteck</p>
