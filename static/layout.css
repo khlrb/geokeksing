@@ -20,3 +20,14 @@
 	height: 600px;
 	width: 100%;
 }
+
+#addmap {
+    height: 600px;
+	width: 75%;
+    float: right;
+}
+
+#addform {
+    float: left;
+    width: 25%;
+}
